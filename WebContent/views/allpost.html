@@ -1,0 +1,36 @@
+
+<div class="container">
+	
+		<div ng-repeat="post in posts | filter:searchTxt">
+			<div class="panel panel-default">
+
+				<div class="panel-heading">
+					<b>{{post.post_title}}</b>
+				</div>
+
+				<div class="panel-body">
+					<table>
+					
+				<tr>
+					<td width="30%"><b>Posted On</b> </td> 
+					<td width="10%"> : </td>
+					<td>{{post.postedOn | date:'MMMM d, y'}}</td>
+				</tr>
+				
+				<tr>
+					<td><b>Post Content</b> </td>
+					<td width="10%"> : </td> 
+					<td>{{post.post_content}}</td>
+				</tr>
+				
+				<tr>
+					<td width="30%"><b>Posted By</b> </td> 
+					<td width="10%"> : </td>
+					<td>{{post.postedBy.name}}</td>
+				</tr>
+				
+				</table>
+				</div>
+			</div>
+		</div>
+</div>

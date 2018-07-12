@@ -1,0 +1,57 @@
+<!-- <link href="resources/css/login.css" rel="stylesheet"> -->
+
+<div id="register-box">
+<center><h2 class="form-signin-heading">Register</h2><br></center>
+<span style="color:red">{{error.message}}</span>
+
+<form name="register">
+
+<div class="form-group">
+<label>Enter Email id :</label><span style="color: red">*</span>
+<input type="email" ng-model="user.email" name="emailid" class="form-control" placeholder="Enter Email ID" required="required" />
+</div>
+
+<div class="form-group">
+<label>Enter Your Name :</label><span style="color: red">*</span>
+<input type="text" ng-model="user.name" name="first" class="form-control" placeholder="Enter First Name" required="required" />
+</div>
+
+	
+<div class="form-group">
+<label>Enter Password : </label><span style="color: red">*</span>
+<input type="password" ng-model="user.password" name="pass" class="form-control" placeholder="Enter password" required="required" >
+</div>
+
+<div class="form-group">
+<label>Address :</label><span style="color: red">*</span>
+<input type="text" ng-model="user.address" name="first" class="form-control" placeholder="Enter First Name" required="required" />
+</div>
+
+<div class="form-group">
+<label>Contact No : </label><span style="color: red">*</span>
+<input type="text" ng-model="user.contact" name="phone" class="form-control" placeholder="Enter Contact Number" required="required">
+</div>
+
+
+
+<div class="form-group">
+      <label>Select Role (select one):</label><span style="color: red">*</span>
+      <select ng-model="user.role">
+        <option value="STUDENT">Student</option>
+        <option value="EMPLOYEE">Employee</option>
+        <option value="ALUMNI">Alumni</option>
+        <option value="PROFESSIONAL">Professional</option>
+      </select>
+</div>
+
+<input type="submit" class="btn btn-primary btn-block" ng-click="registerUser(user)" value="Register">
+
+
+<br>
+<hr color="black">
+        You have already an account ! <a href="#!/login">please login Here</a>
+
+</form>
+
+
+</div>
